@@ -45,16 +45,17 @@ function generate_problem_dictionary()
 
 	flux_bounds_array[:,1]=zeros(number_of_reactions,1)
 	flux_bounds_array[:,2]=fill(10,(number_of_reactions,1))
-	flux_bounds_array[1,1]=0.036*203
+	flux_bounds_array[1,1]=0
 	flux_bounds_array[1,2]=0.036*203
-	flux_bounds_array[2,1]=0.036*34.5
+	flux_bounds_array[2,1]=0
 	flux_bounds_array[2,2]=0.036*34.5
-	flux_bounds_array[3,1]=0.036*249
+	flux_bounds_array[3,1]=0
 	flux_bounds_array[3,2]=0.036*249
-	flux_bounds_array[4,1]=0.036*88.1
+	flux_bounds_array[4,1]=0
 	flux_bounds_array[4,2]=0.036*88.1
-	flux_bounds_array[5,1]=0.036*13.7
-	flux_bounds_array[6,1]=0.036*13.7
+	flux_bounds_array[5,2]=0
+	flux_bounds_array[5,2]=0.036*13.7
+	flux_bounds_array[6,1]=0
 	flux_bounds_array[6,2]=0.036*13.7
 	# TODO: col 1 => lower bound
 	# TODO: col 2 => upper bound
@@ -66,7 +67,7 @@ function generate_problem_dictionary()
 	# TODO: however, if you formulate the problem differently you *may* need to change this 
 
 	# Min/Max flag - default is minimum -
-	is_minimum_flag = true
+	is_minimum_flag = false
 
 	# Setup the objective coefficient array -
 	objective_coefficient_array = zeros(number_of_reactions)
